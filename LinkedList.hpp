@@ -45,7 +45,15 @@ bool LinkedList<T>::search(T value) const
 		Fix this method
 	*/
 
-	return(isFound);
+while(temp!=NULL)
+	{
+		if (temp->getValue() == value) {
+			isFound = true;
+			return(isFound);
+		}
+		temp = temp->getNext();
+	}
+	return(isFound);	
 }
 
 template <typename T>
