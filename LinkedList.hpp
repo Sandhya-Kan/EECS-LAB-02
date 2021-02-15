@@ -106,8 +106,21 @@ bool LinkedList<T>::removeBack()
 	/** TODO 
 		Fix this method
 	*/
-
+lastNode = m_front;
+	if (!isEmpty()) 
+	{
+		while (lastNode->getNext() != NULL)
+		{
+			secondintoLast = lastNode;
+			lastNode = lastNode->getNext();			
+		}
+		secondintoLast->setNext(nullptr);
+		isRemoved = true;
+		m_size--;
+	} 
 	return(isRemoved);
+
+
 }	
 
 template <typename T>
